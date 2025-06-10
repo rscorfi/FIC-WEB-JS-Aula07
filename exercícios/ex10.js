@@ -6,10 +6,12 @@
 let salario = Number(prompt('Informe seu salário: '))
 let imposto = 0
 
-if (salario <= 2000){
+if (salario <= 2000){    
     console.log(`Imposto a pagar: Isento`)
 } else if (salario <= 3500){
-    console.log(`Imposto a pagar: ${(salario * 0.1).toFixed(2)}`)
+    imposto = (salario - 2000) * 0.1
+    console.log(`Imposto a pagar: ${imposto.toFixed(2)}`)
 } else {
-    console.log(`Imposto a pagar: ${(salario * 0.2).toFixed(2)}`)
+    imposto = 150 + (salario - 3500) * 0.2
+    console.log(`Imposto a pagar: ${imposto.toFixed(2)}`)
 }
